@@ -63,7 +63,7 @@ public final class SessionEventListener extends LogItCoreObject
             
             if (getConfig("config.yml").getBoolean("forceLogin.hideOtherPlayers"))
             {
-                for (Player onlinePlayer : Bukkit.getOnlinePlayers())
+                for (Player onlinePlayer : PlayerUtils.getOnlinePlayers())
                 {
                     if (onlinePlayer == player)
                         continue;
@@ -127,7 +127,7 @@ public final class SessionEventListener extends LogItCoreObject
             
             if (getConfig("config.yml").getBoolean("forceLogin.hideOtherPlayers"))
             {
-                for (Player onlinePlayer : Bukkit.getOnlinePlayers())
+                for (Player onlinePlayer : PlayerUtils.getOnlinePlayers())
                 {
                     if (onlinePlayer == player)
                         continue;

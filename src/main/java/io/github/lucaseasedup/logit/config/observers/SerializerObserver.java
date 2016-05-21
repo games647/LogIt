@@ -9,9 +9,9 @@ import io.github.lucaseasedup.logit.persistence.HealthBarSerializer;
 import io.github.lucaseasedup.logit.persistence.HungerBarSerializer;
 import io.github.lucaseasedup.logit.persistence.LocationSerializer;
 import io.github.lucaseasedup.logit.persistence.PersistenceSerializer;
+import io.github.lucaseasedup.logit.util.PlayerUtils;
 import java.util.Arrays;
 import java.util.logging.Level;
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 public final class SerializerObserver extends PropertyObserver
@@ -65,7 +65,7 @@ public final class SerializerObserver extends PropertyObserver
     
     private void enableSerializer(Class<? extends PersistenceSerializer> clazz)
     {
-        for (Player player : Bukkit.getOnlinePlayers())
+        for (Player player : PlayerUtils.getOnlinePlayers())
         {
             if (getSessionManager().isSessionAlive(player))
                 continue;
@@ -97,7 +97,7 @@ public final class SerializerObserver extends PropertyObserver
     
     private void disableSerializer(Class<? extends PersistenceSerializer> clazz)
     {
-        for (Player player : Bukkit.getOnlinePlayers())
+        for (Player player : PlayerUtils.getOnlinePlayers())
         {
             Account account = getAccountManager().selectAccount(
                     player.getName(),

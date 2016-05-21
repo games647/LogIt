@@ -202,14 +202,14 @@ public final class PlayerEventListener extends LogItCoreObject
         else
         {
             int freeSlots =
-                    Bukkit.getMaxPlayers() - Bukkit.getOnlinePlayers().length;
+                    Bukkit.getMaxPlayers() - PlayerUtils.getOnlinePlayers().size();
             List<String> reserveForPlayers = getConfig("config.yml")
                     .getStringList("reserveSlots.forPlayers");
             int reservedSlots = 0;
             
             // Calculate how many players for which slots should be reserved
             // are online.
-            for (Player p : Bukkit.getOnlinePlayers())
+            for (Player p : PlayerUtils.getOnlinePlayers())
             {
                 if (CollectionUtils.containsIgnoreCase(
                         p.getName(), reserveForPlayers
@@ -420,7 +420,7 @@ public final class PlayerEventListener extends LogItCoreObject
         {
             if (getConfig("config.yml").getBoolean("forceLogin.hideOtherPlayers"))
             {
-                for (Player onlinePlayer : Bukkit.getOnlinePlayers())
+                for (Player onlinePlayer : PlayerUtils.getOnlinePlayers())
                 {
                     if (onlinePlayer == player)
                         continue;
@@ -459,7 +459,7 @@ public final class PlayerEventListener extends LogItCoreObject
             
             if (getConfig("config.yml").getBoolean("forceLogin.hideOtherPlayers"))
             {
-                for (Player onlinePlayer : Bukkit.getOnlinePlayers())
+                for (Player onlinePlayer : PlayerUtils.getOnlinePlayers())
                 {
                     if (onlinePlayer == player)
                         continue;

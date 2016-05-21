@@ -7,6 +7,7 @@ import io.github.lucaseasedup.logit.common.ReportedException;
 import io.github.lucaseasedup.logit.config.PropertyType;
 import io.github.lucaseasedup.logit.config.validators.StorageTypeValidator;
 import io.github.lucaseasedup.logit.storage.SelectorConstant;
+import io.github.lucaseasedup.logit.util.PlayerUtils;
 import java.util.List;
 import java.util.logging.Level;
 import org.bukkit.Bukkit;
@@ -225,7 +226,7 @@ public final class ConvertWizard extends Wizard
     
     private void doConversion()
     {
-        for (Player player : Bukkit.getOnlinePlayers())
+        for (Player player : PlayerUtils.getOnlinePlayers())
         {
             player.kickPlayer(t("serverMaintenance"));
         }

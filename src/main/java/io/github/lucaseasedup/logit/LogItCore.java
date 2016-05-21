@@ -73,6 +73,7 @@ import io.github.lucaseasedup.logit.storage.WrapperStorage;
 import io.github.lucaseasedup.logit.tab.TabListUpdater;
 import io.github.lucaseasedup.logit.util.CollectionUtils;
 import io.github.lucaseasedup.logit.util.IoUtils;
+import io.github.lucaseasedup.logit.util.PlayerUtils;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
@@ -632,7 +633,7 @@ public final class LogItCore
         {
             AccountKeys keys = getAccountManager().getKeys();
             
-            for (Player player : Bukkit.getOnlinePlayers())
+            for (Player player : PlayerUtils.getOnlinePlayers())
             {
                 Account account = getAccountManager().selectAccount(player.getName(),
                         Arrays.asList(
@@ -805,7 +806,7 @@ public final class LogItCore
             }
         };
         
-        for (final Player player : Bukkit.getOnlinePlayers())
+        for (final Player player : PlayerUtils.getOnlinePlayers())
         {
             playerEventListener.onLogin(player,
                     player.getAddress().getAddress(), playerKicker);
@@ -867,7 +868,7 @@ public final class LogItCore
         
         if (playerEventListener != null)
         {
-            for (final Player player : Bukkit.getOnlinePlayers())
+            for (final Player player : PlayerUtils.getOnlinePlayers())
             {
                 playerEventListener.onQuit(player, new QuitMessage()
                 {

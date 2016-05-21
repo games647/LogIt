@@ -7,7 +7,7 @@ import io.github.lucaseasedup.logit.craftreflect.CraftPlayer;
 import io.github.lucaseasedup.logit.craftreflect.CraftReflect;
 import io.github.lucaseasedup.logit.craftreflect.EntityPlayer;
 import io.github.lucaseasedup.logit.session.SessionStartEvent;
-import org.bukkit.Bukkit;
+import io.github.lucaseasedup.logit.util.PlayerUtils;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -37,7 +37,7 @@ public final class TabListUpdater extends LogItCoreObject
     
     public void updateAllTabLists()
     {
-        for (Player player : Bukkit.getOnlinePlayers())
+        for (Player player : PlayerUtils.getOnlinePlayers())
         {
             updateTabList(player);
         }
@@ -58,7 +58,7 @@ public final class TabListUpdater extends LogItCoreObject
         int i = 0;
         int j = 0;
         
-        for (Player p : Bukkit.getOnlinePlayers())
+        for (Player p : PlayerUtils.getOnlinePlayers())
         {
             if (!getSessionManager().isSessionAlive(p) && !p.equals(player)
                     && getConfig("config.yml").getBoolean("forceLogin.hideFromTabList"))

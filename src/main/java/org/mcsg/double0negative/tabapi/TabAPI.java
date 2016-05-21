@@ -11,6 +11,7 @@ import com.comphenix.protocol.events.PacketContainer;
 import com.comphenix.protocol.events.PacketEvent;
 import com.comphenix.protocol.events.PacketListener;
 import io.github.lucaseasedup.logit.LogItCore;
+import io.github.lucaseasedup.logit.util.PlayerUtils;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -303,7 +304,7 @@ public final class TabAPI implements Listener
     
     public void updateAll()
     {
-        for (Player player : Bukkit.getOnlinePlayers())
+        for (Player player : PlayerUtils.getOnlinePlayers())
         {
             updatePlayer(player);
         }

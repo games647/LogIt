@@ -2,6 +2,7 @@ package io.github.lucaseasedup.logit.message;
 
 import io.github.lucaseasedup.logit.LogItPlugin;
 import io.github.lucaseasedup.logit.util.CollectionUtils;
+import io.github.lucaseasedup.logit.util.PlayerUtils;
 import java.util.Collection;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -88,7 +89,7 @@ public final class MessageHelper
         if (message == null)
             return;
         
-        for (Player p : Bukkit.getOnlinePlayers())
+        for (Player p : PlayerUtils.getOnlinePlayers())
         {
             sendMsg(p, message);
         }
@@ -112,7 +113,7 @@ public final class MessageHelper
         if (exceptPlayers == null)
             throw new IllegalArgumentException();
         
-        for (Player p : Bukkit.getOnlinePlayers())
+        for (Player p : PlayerUtils.getOnlinePlayers())
         {
             if (!CollectionUtils.containsIgnoreCase(p.getName(), exceptPlayers))
             {

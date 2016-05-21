@@ -2,7 +2,7 @@ package io.github.lucaseasedup.logit.config.observers;
 
 import io.github.lucaseasedup.logit.config.Property;
 import io.github.lucaseasedup.logit.config.PropertyObserver;
-import org.bukkit.Bukkit;
+import io.github.lucaseasedup.logit.util.PlayerUtils;
 import org.bukkit.entity.Player;
 
 public final class HideOtherPlayersObserver extends PropertyObserver
@@ -12,7 +12,7 @@ public final class HideOtherPlayersObserver extends PropertyObserver
     {
         if (p.getBoolean())
         {
-            for (Player player : Bukkit.getOnlinePlayers())
+            for (Player player : PlayerUtils.getOnlinePlayers())
             {
                 if (getSessionManager().isSessionAlive(player)
                         || !getCore().isPlayerForcedToLogIn(player))
@@ -20,7 +20,7 @@ public final class HideOtherPlayersObserver extends PropertyObserver
                     continue;
                 }
                 
-                for (Player otherPlayer : Bukkit.getOnlinePlayers())
+                for (Player otherPlayer : PlayerUtils.getOnlinePlayers())
                 {
                     if (otherPlayer == player)
                         continue;
@@ -32,7 +32,7 @@ public final class HideOtherPlayersObserver extends PropertyObserver
         }
         else
         {
-            for (Player player : Bukkit.getOnlinePlayers())
+            for (Player player : PlayerUtils.getOnlinePlayers())
             {
                 if (getSessionManager().isSessionAlive(player)
                         || !getCore().isPlayerForcedToLogIn(player))
@@ -40,7 +40,7 @@ public final class HideOtherPlayersObserver extends PropertyObserver
                     continue;
                 }
                 
-                for (Player otherPlayer : Bukkit.getOnlinePlayers())
+                for (Player otherPlayer : PlayerUtils.getOnlinePlayers())
                 {
                     if (otherPlayer == player)
                         continue;
