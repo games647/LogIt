@@ -24,10 +24,10 @@
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
-        <repository>
+<!--        <repository>
             <id>Plugin Metrics</id>
             <url>http://repo.mcstats.org/content/repositories/public</url>
-        </repository>
+        </repository>-->
         <repository>
             <id>vault-repo</id>
             <url>http://nexus.theyeticave.net/content/repositories/pub_releases</url>
@@ -72,12 +72,12 @@
             <version>2.0-rc1</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
+<!--        <dependency>
             <groupId>org.mcstats.bukkit</groupId>
             <artifactId>metrics-lite</artifactId>
             <version>R7</version>
             <scope>compile</scope>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>javax.mail</groupId>
             <artifactId>mail</artifactId>
@@ -177,7 +177,7 @@
                     </filters>
                     <artifactSet>
                         <includes>
-                            <include>org.mcstats.bukkit:metrics-lite</include>
+                            <!--<include>org.mcstats.bukkit:metrics-lite</include>-->
                             <include>javax.mail:mail</include>
                         </includes>
                     </artifactSet>

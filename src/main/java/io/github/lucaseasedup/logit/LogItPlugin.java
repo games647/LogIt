@@ -25,7 +25,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.serialization.ConfigurationSerialization;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.mcstats.MetricsLite;
+//import org.mcstats.MetricsLite;
 
 public final class LogItPlugin extends JavaPlugin
 {
@@ -35,14 +35,14 @@ public final class LogItPlugin extends JavaPlugin
     @Override
     public void onEnable()
     {
-        try
-        {
-            MetricsLite metrics = new MetricsLite(this);
-            metrics.start();
-        }
-        catch (IOException ex)
-        {
-        }
+//        try
+//        {
+//            MetricsLite metrics = new MetricsLite(this);
+//            metrics.start();
+//        }
+//        catch (IOException ex)
+//        {
+//        }
         
         try
         {
