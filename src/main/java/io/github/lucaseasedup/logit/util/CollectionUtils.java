@@ -2,7 +2,6 @@ package io.github.lucaseasedup.logit.util;
 
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.Set;
 
 public final class CollectionUtils
 {
@@ -56,9 +55,9 @@ public final class CollectionUtils
     {
         if (coll == null)
             throw new IllegalArgumentException();
-        
-        Set<Object> set = new HashSet<>(coll);
-        
+
+        HashSet<?> set = new HashSet<>(coll);
+
         return set.size() != coll.size();
     }
     

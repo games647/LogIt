@@ -1,6 +1,5 @@
-package io.github.lucaseasedup.logit.craftreflect.v1_10_R1;
+package io.github.lucaseasedup.logit.craftreflect.v1_11_R1;
 
-import io.github.lucaseasedup.logit.craftreflect.v1_10_R1.EntityPlayer;
 import org.bukkit.entity.Player;
 
 public final class CraftPlayer
