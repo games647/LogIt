@@ -64,22 +64,6 @@ public final class SqliteStorage implements Storage
     @Override
     public void close() throws IOException
     {
-        if (connection != null)
-        {
-            try
-            {
-                connection.close();
-            }
-            catch (SQLException ex)
-            {
-                throw new IOException(ex);
-            }
-            finally
-            {
-                connection = null;
-            }
-        }
-        
         if (statement != null)
         {
             try
@@ -93,6 +77,22 @@ public final class SqliteStorage implements Storage
             finally
             {
                 statement = null;
+            }
+        }
+
+        if (connection != null)
+        {
+            try
+            {
+                connection.close();
+            }
+            catch (SQLException ex)
+            {
+                throw new IOException(ex);
+            }
+            finally
+            {
+                connection = null;
             }
         }
     }
