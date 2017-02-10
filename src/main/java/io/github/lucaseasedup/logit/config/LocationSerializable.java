@@ -61,8 +61,9 @@ public final class LocationSerializable
     {
         World worldObj = Bukkit.getWorld(world);
         
-        if (worldObj == null)
-            return null;
+        if (worldObj == null) {
+            throw new IllegalStateException("Cannot find world name of: " + world);
+        }
         
         return new org.bukkit.Location(worldObj, x, y, z, yaw, pitch);
     }

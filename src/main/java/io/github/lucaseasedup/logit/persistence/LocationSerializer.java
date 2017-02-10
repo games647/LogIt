@@ -26,13 +26,13 @@ public final class LocationSerializer extends LogItCoreObject implements Persist
         
         if (player.isOnline())
         {
-            final Location waitingRoomLocation = getCore().getWaitingRoomLocation();
+            Location waitingRoomLocation = getCore().getWaitingRoomLocation();
             
             player.teleport(waitingRoomLocation);
             
-            final int teleportPasses = getConfig("secret.yml")
+            int teleportPasses = getConfig("secret.yml")
                     .getInt("locationSerializer.teleportCheck.passes");
-            final double dislocationRadius = getConfig("secret.yml")
+            double dislocationRadius = getConfig("secret.yml")
                     .getDouble("locationSerializer.teleportCheck.dislocationRadius");
             
             // Make sure that no other plugin teleported the player away.
