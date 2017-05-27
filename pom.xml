@@ -37,9 +37,9 @@
             <url>http://repo.kitteh.org/content/repositories/releases/</url>
         </repository>
         <repository>
-            <id>comphenix-rep</id>
-            <name>Comphenix Repository</name>
-            <url>http://repo.comphenix.net/content/groups/public</url>
+            <id>dmulloy-rep</id>
+            <name>dmulloy Repository</name>
+            <url>http://repo.dmulloy2.net/content/groups/public</url>
         </repository>
         <repository>
             <id>ess-repo</id>
@@ -48,12 +48,6 @@
     </repositories>
 
     <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>bukkit</artifactId>
@@ -87,7 +81,7 @@
         <dependency>
             <groupId>net.milkbowl.vault</groupId>
             <artifactId>VaultAPI</artifactId>
-            <version>1.5</version>
+            <version>1.6</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -106,7 +100,7 @@
         <dependency>
             <groupId>com.comphenix.protocol</groupId>
             <artifactId>ProtocolLib</artifactId>
-            <version>3.4.0</version>
+            <version>4.2.1</version>
         </dependency>
         <dependency>
             <groupId>com.gmail.bukkitsmerf</groupId>
@@ -136,7 +130,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
-                <version>1.7</version>
+                <version>3.0.0</version>
                 <executions>
                     <execution>
                         <id>add-source</id>
@@ -155,7 +149,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>2.3</version>
+                <version>3.0.0</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -200,8 +194,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <plugin.defaultLocale>en</plugin.defaultLocale>
     </properties>
 </project>
