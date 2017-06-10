@@ -14,8 +14,8 @@ public final class EntityPlayer
         return getThis().ping;
     }
     
-    private net.minecraft.server.v1_10_R1.EntityPlayer getThis()
+    private net.minecraft.server.v1_11_R1.EntityPlayer getThis()
     {
-        return (net.minecraft.server.v1_10_R1.EntityPlayer) getHolder().get();
+        return (net.minecraft.server.v1_11_R1.EntityPlayer) getHolder().get();
     }
 }

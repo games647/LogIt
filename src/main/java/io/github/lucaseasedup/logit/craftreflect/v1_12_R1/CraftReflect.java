@@ -1,4 +1,4 @@
-package io.github.lucaseasedup.logit.craftreflect.v1_10_R1;
+package io.github.lucaseasedup.logit.craftreflect.v1_12_R1;
 
 import org.bukkit.entity.Player;
 

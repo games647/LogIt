@@ -1,4 +1,4 @@
-package io.github.lucaseasedup.logit.craftreflect.v1_10_R2;
+package io.github.lucaseasedup.logit.craftreflect.v1_12_R1;
 
 public final class EntityPlayer
         extends io.github.lucaseasedup.logit.craftreflect.EntityPlayer
@@ -14,8 +14,8 @@ public final class EntityPlayer
         return getThis().ping;
     }
     
-    private net.minecraft.server.v1_10_R2.EntityPlayer getThis()
+    private net.minecraft.server.v1_12_R1.EntityPlayer getThis()
     {
-        return (net.minecraft.server.v1_10_R2.EntityPlayer) getHolder().get();
+        return (net.minecraft.server.v1_12_R1.EntityPlayer) getHolder().get();
     }
 }

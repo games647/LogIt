@@ -1,4 +1,4 @@
-package io.github.lucaseasedup.logit.craftreflect.v1_11_R1;
+package io.github.lucaseasedup.logit.craftreflect.v1_12_R1;
 
 import org.bukkit.entity.Player;
 
@@ -16,8 +16,8 @@ public final class CraftPlayer
         return new EntityPlayer(getThis().getHandle());
     }
     
-    private org.bukkit.craftbukkit.v1_11_R1.entity.CraftPlayer getThis()
+    private org.bukkit.craftbukkit.v1_12_R1.entity.CraftPlayer getThis()
     {
-        return (org.bukkit.craftbukkit.v1_11_R1.entity.CraftPlayer) getHolder().get();
+        return (org.bukkit.craftbukkit.v1_12_R1.entity.CraftPlayer) getHolder().get();
     }
 }
